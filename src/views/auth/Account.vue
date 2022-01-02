@@ -1,13 +1,10 @@
 <template>
   <section>
     <div class="container">
-      <h1>Home</h1>
+      <h1>My account</h1>
     </div>
   </section>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-}
 </script>
