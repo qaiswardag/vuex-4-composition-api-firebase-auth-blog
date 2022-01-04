@@ -307,7 +307,7 @@ a:active {
 /**************************/
 
 .header {
-  background: var(--fifth);
+  background: #ffe7e7;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -356,6 +356,7 @@ a:active {
   cursor: pointer;
   border: none;
   letter-spacing: 0;
+  font-weight: 500;
 }
 
 /* when holding click down on anchor tag */
