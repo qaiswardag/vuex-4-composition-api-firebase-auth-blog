@@ -2,9 +2,13 @@ import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-    points: 10,
+    points: 100,
   },
-  mutations: {},
+  mutations: {
+    updatePoint(state, payload) {
+      state.points = state.points + payload;
+    },
+  },
   actions: {},
   modules: {},
 });
