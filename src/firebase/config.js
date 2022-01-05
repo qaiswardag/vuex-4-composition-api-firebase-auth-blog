@@ -22,9 +22,11 @@
 // // init firebase auth.
 // // init firebase auth will return something to us. so: getAuth will return something
 // // we can fx use it in our components or vuex store to interact to ex sign user in, out or signup
+// //
 // const auth = getAuth();
 
 // // now we need to export the  auth property so we can use it in another file
+
 // export { auth };
 //
 //
@@ -59,6 +61,3 @@
 //
 //
 //
-//
-// try to use init our firebase webapp and init firebase auth service below
-// if need help look in the top of the file
