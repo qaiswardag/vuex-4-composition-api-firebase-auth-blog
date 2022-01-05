@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo">
-      <router-link :to="{name: 'Home'}" class="logo">logo</router-link>
+      <router-link :to="{name: 'Home'}" class="logo">nav component: {{points}}</router-link>
     </div>
     <nav class="main-nav">
       <ul class="main-nav-list">
@@ -17,7 +17,15 @@
   </header>
 </template>
 
+
 <script>
+export default {
+  computed: {
+    points() {
+      return this.$store.state.points
+    },
+  },
+}
 </script>
 
 <style>
