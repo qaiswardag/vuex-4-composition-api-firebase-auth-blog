@@ -1,15 +1,7 @@
 <template>
   <section>
     <div class="container">
-
-      <h2>points: {{points}}</h2>
-      <button @click="updatePoint(1)" class="btn mr-2">add point</button>
-      <button @click="updatePoint(-1)" class="btn">remove point</button>
-      <hr class="mb-6">
-
       <h1>Home</h1>
-      <!-- Vuex basics -->
-
       <div v-for="blog in blogs" :key="blog.id" class="grid grid--1-cols">
         <div class="blog">
           <h2>{{ blog.title }}</h2>
@@ -41,20 +33,6 @@ export default {
     //
     //
     return { blogs }
-  },
-  //
-  //
-  methods: {
-    updatePoint(points) {
-      this.$store.commit('updatePoint', points)
-    },
-  },
-  //
-  //
-  computed: {
-    points() {
-      return this.$store.state.points
-    },
   },
   //
 }
