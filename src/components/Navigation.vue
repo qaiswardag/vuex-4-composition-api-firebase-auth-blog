@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo">
-      <router-link :to="{name: 'Home'}" class="logo">nav component: {{points}}</router-link>
+      <router-link :to="{name: 'Home'}" class="logo">logo</router-link>
     </div>
     <nav class="main-nav">
       <ul class="main-nav-list">
