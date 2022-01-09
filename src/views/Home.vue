@@ -15,23 +15,26 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue'
-import { useStore } from 'vuex'
+import { ref } from 'vue'
 
+import { useStore } from 'vuex'
 export default {
   setup() {
+    //
+    //
+    const store = useStore()
+    const user = store.state.user
+
     const blogs = ref([
       { title: 'Why Coffee is Better than Tea', id: 1 },
       { title: '...Then I Took an Arrow in the Knee', id: 2 },
       { title: 'Mario vs Luigi, Ultimate Showdown', id: 3 },
     ])
 
-    const store = useStore()
-
-    return { 
+    return {
       blogs,
-      user: computed(() => store.state.user)
+      user,
     }
-  }
+  },
 }
 </script>

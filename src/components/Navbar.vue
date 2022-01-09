@@ -1,14 +1,14 @@
 <template>
   <nav>
     <h1>Vuex Auth</h1>
-    <template v-if="authIsReady">
+    <template>
       <!-- for all users -->
       <div>
         <router-link to="/">Home</router-link>
       </div>
       <!-- for logged in users -->
       <div v-if="user">
-        <span>Logged in as {{ user.email }}</span>
+        <span>Logged in as </span>
         <button @click="handleClick">Logout</button>
       </div>
       <!-- for logged out users -->
@@ -22,21 +22,23 @@
 
 <script>
 import { useStore } from 'vuex'
-import { computed } from 'vue'
-
 export default {
   setup() {
+    //
+    //
     const store = useStore()
-
+    const user = store.state.user
+    //
+    //
+    //
     const handleClick = () => {
-      store.dispatch('logout')
+      console.log('clicked logout')
     }
 
     return {
       handleClick,
-      user: computed(() => store.state.user),
-      authIsReady: computed(() => store.state.authIsReady)
+      user,
     }
-  }
+  },
 }
 </script>

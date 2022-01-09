@@ -15,8 +15,6 @@
 
 <script>
 import { ref } from 'vue'
-import { useStore } from 'vuex'
-import { useRouter } from 'vue-router'
 
 export default {
   setup() {
@@ -24,23 +22,11 @@ export default {
     const password = ref('')
     const error = ref(null)
 
-    const store = useStore()
-    const router = useRouter()
-
     const handleSubmit = async () => {
-      try {
-        await store.dispatch('login', {
-          email: email.value,
-          password: password.value
-        })
-        router.push('/')
-      }
-      catch (err) {
-        error.value = err.message
-      }
+      console.log('clicked login')
     }
 
     return { handleSubmit, email, password, error }
-  }
+  },
 }
 </script>

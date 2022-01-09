@@ -14,9 +14,7 @@
 </template>
 
 <script>
-import { ref} from 'vue'
-import { useStore } from 'vuex'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 
 export default {
   setup() {
@@ -24,23 +22,11 @@ export default {
     const password = ref('')
     const error = ref(null)
 
-    const store = useStore()
-    const router = useRouter()
-
     const handleSubmit = async () => {
-      try {
-        await store.dispatch('signup', {
-          email: email.value,
-          password: password.value
-        })
-        router.push('/')
-      }
-      catch (err) {
-        error.value = err.message
-      }
+      console.log('clicked signup')
     }
 
     return { handleSubmit, email, password, error }
-  }
+  },
 }
 </script>
