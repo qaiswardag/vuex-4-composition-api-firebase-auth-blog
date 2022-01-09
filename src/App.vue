@@ -1,14 +1,14 @@
 <template>
-  <Navigation></Navigation>
-  <router-view></router-view>
+  <div class="container">
+    <Navbar />
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue'
+import Navbar from './components/Navbar'
+
 export default {
-  components: { Navigation },
+  components: {Navbar}
 }
 </script>
-
-<style>
-</style>
