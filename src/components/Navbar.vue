@@ -5,17 +5,23 @@
       <div>
         <router-link to="/">Home</router-link>
       </div>
+
       <div v-if="user">
-        <router-link :to="{name: 'Account'}">Account: {{user.displayName}}</router-link>
+        <router-link :to="{name: 'Account'}">
+          Account: {{user.displayName}}
+        </router-link>
+
         <button style="margin-left:2rem" class="btn" @click="handleClick">Logout</button>
       </div>
+
       <div v-if="!user">
         <router-link to="/login">Login</router-link>
       </div>
-      <div v-if="!user">
 
+      <div v-if="!user">
         <router-link to="/signup">Signup</router-link>
       </div>
+
     </nav>
   </div>
 </template>
