@@ -18,21 +18,20 @@
 
 <script>
 import { ref } from 'vue'
+import { useStore } from 'vuex'
 
 export default {
   setup() {
+    //
+    const store = useStore()
+    //
     const displayName = ref('')
     const email = ref('')
     const password = ref('')
     const error = ref(null)
 
     const handleSubmit = async () => {
-      console.log(
-        'clicked signup',
-        displayName.value,
-        email.value,
-        password.value
-      )
+
     }
 
     return { handleSubmit, displayName, email, password, error }
