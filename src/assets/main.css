@@ -273,7 +273,6 @@ a:active {
   font-weight: bold;
 }
 
-nav a,
 nav a {
   color: #000 !important;
   display: inline-block;
@@ -282,12 +281,12 @@ nav a {
 }
 
 nav a:hover {
-  color: #fff !important;
+  color: var(--secondary) !important;
 }
 
 /* when holding click down on anchor tag */
-nav a:active {
-  color: #000 !important;
+nav .router-link-active {
+  color: #fff !important;
   outline: none;
 }
 
@@ -319,7 +318,7 @@ nav a:active {
 .btn:hover,
 .btn:active {
   background: var(--third);
-  color: #fff;
+  color: var(--primary);
 }
 
 /* Modifier */
