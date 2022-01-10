@@ -2,13 +2,9 @@ import { createStore } from 'vuex';
 
 const store = createStore({
   state: {
-    user: { displayName: 'trine' },
+    user: null,
   },
-  mutations: {
-    setUser(state, payload) {
-      state.user = 'payload';
-    },
-  },
+  mutations: {},
 });
 
 // export the store

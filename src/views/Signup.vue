@@ -31,7 +31,7 @@ export default {
     const error = ref(null)
 
     const handleSubmit = async () => {
-
+      console.log('signup form has been submitted')
     }
 
     return { handleSubmit, displayName, email, password, error }
